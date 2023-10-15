@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | AIBM-CODERS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+        <br> 
+       <p style="font-family:georgia,garamond,serif;font: size 16px;font-style:italic;font:pink">developer @razin</p>
+          </p>
+    </a> 
+    <div class="container">
+        <div class="content">
+            <img src="" alt="">
+            <h1>Friendship Calculator</h1>
+        
+            <div class="inputarea">
+                <input type="text" placeholder="Your Name" id="NameOne" onfocus="this.value = ''">
+                <input type="text" placeholder="Your Friend" id="NameTwo" onfocus="this.value = ''">
+            </div>
+            <a href="#" onclick="friend()">Calculate</a>
+            <p id="print">Your Friendship result here</p>
+            <p id="statement"></p>
+        </div>
+    </div>
+    
+    <script>
+        function friend(){
+        var name1 = document.getElementById("NameOne").value;
+        var name2 = document.getElementById("NameTwo").value;
+        if(name1.length<=2){
+            alert("Enter at least 3 character");
+        }
+        if(name2.length<=2){
+            alert("Enter at least 3 character");
+        }
+        else{
+            var random = Math.floor(Math.random()*100);
+            document.getElementById("print").innerHTML = name1 + " and " + name2 + "=" +random + "%" + "of love";
+        }
+        if(random<=10 || random<=50){
+            document.getElementById("statement").innerHTML = " Friends ";
+        }
+        else if(random<=51 || random<=100){
+            document.getElementById("statement").innerHTML = "Best Friends Forever";
+        }
+    }
+    </script>
+   
+</div>
+</body>
+</html>
